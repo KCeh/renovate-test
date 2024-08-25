@@ -2,7 +2,7 @@
 activity-compose = "1.9.1"
 android-application = "8.2.2"
 android-library = "8.2.2"
-appcompat = "1.6.1"
+appcompat = "1.7.0"
 benmanesversions = "0.51.0"
 compose-bom = "2024.01.00"
 compose-compiler = "1.5.14"
