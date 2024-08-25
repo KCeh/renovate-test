@@ -4,7 +4,6 @@ android-application = "8.5.2"
 android-library = "8.5.2"
 appcompat = "1.7.0"
 compose-bom = "2024.08.00"
-compose-compiler = "1.5.14"
 compose-material3 = "1.2.1"
 core = "2.2.0"
 coroutines = "1.8.1"
@@ -104,6 +103,7 @@ room = [
 android-application = { id = "com.android.application", version.ref = "android-application" }
 android-library = { id = "com.android.library", version.ref = "android-library" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
-jetbrains-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-jetbrains-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "jetbrains-serialization" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "jetbrains-serialization" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

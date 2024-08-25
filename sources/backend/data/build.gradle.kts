@@ -1,7 +1,7 @@
 plugins {
     kotlin("jvm")
     kotlin("kapt")
-    alias(libs.plugins.jetbrains.serialization)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 dependencies {
