@@ -1,33 +1,30 @@
 [versions]
-activity-compose = "1.9.1"
-android-application = "8.5.1"
-android-library = "8.5.1"
-appcompat = "1.7.0"
+activity-compose = "1.8.2"
+android-application = "8.2.2"
+android-library = "8.2.2"
+appcompat = "1.6.1"
 benmanesversions = "0.51.0"
-compose-bom = "2024.06.00"
-compose-material3 = "1.2.1"
+compose-bom = "2024.01.00"
+compose-compiler = "1.5.8"
+compose-material3 = "1.1.2"
 core = "2.2.0"
-coroutines = "1.8.1"
-dagger = "2.51.1"
-detekt = "1.23.0"
-detekt-compose = "0.4.8"
-# Duplicated to avoid https://github.com/littlerobots/version-catalog-update-plugin/issues/119
-detekt-plugin = "1.23.6"
-kotlin = "2.0.0"
-# Duplicated to avoid https://github.com/littlerobots/version-catalog-update-plugin/issues/119
-kotlin-plugin = "2.0.0"
-kotlinx-serialization = "1.7.1"
+coroutines = "1.7.3"
+dagger = "2.50"
+detekt = "1.23.4"
+detekt-compose = "0.3.10"
+jetbrains-serialization = "1.9.22"
+kotlin = "1.9.22"
+kotlinx-serialization = "1.6.2"
 kotlinx-serialization-converter = "1.0.0"
-ksp = "2.0.0-1.0.24"
-lifecycle = "2.8.4"
-material = "1.12.0"
-navigation = "2.7.7"
+ksp = "1.9.22-1.0.17"
+lifecycle = "2.7.0"
+material = "1.11.0"
+navigation = "2.7.6"
 okhttp = "4.12.0"
-retrofit = "2.11.0"
+retrofit = "2.9.0"
 retromock = "1.1.1"
 room = "2.6.1"
 timber = "5.0.1"
-versioncatalogupdate = "0.8.4"
 
 [libraries]
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
@@ -107,10 +104,7 @@ room = [
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-application" }
 android-library = { id = "com.android.library", version.ref = "android-library" }
-benmanesversions = { id = "com.github.ben-manes.versions", version.ref = "benmanesversions" }
-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt-plugin" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-plugin" }
-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-plugin" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+jetbrains-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrains-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "jetbrains-serialization" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-versioncatalogupdate = { id = "nl.littlerobots.version-catalog-update", version.ref = "versioncatalogupdate" }
