@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- compose migration attrs -->
+    <attr format="color" name="templatePrimaryColor"/>
+    <attr format="color" name="templateBackgroundColor"/>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TemplateTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="templatePrimaryColor">#D82828</item>
+        <item name="templateBackgroundColor">#000000</item>
+        <item name="colorPrimary">?templatePrimaryColor</item>
+        <item name="android:windowBackground">?templateBackgroundColor</item>
+        <item name="android:statusBarColor">?templatePrimaryColor</item>
+    </style>
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="application_name">TemplateApp</string>
+    <string name="ok">OK</string>
+    <string name="error">Error</string>
+    <string name="error_unknown">Unknown error happened. Try again.</string>
+    <string name="generic_error">Error! try again please</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="remember_me">Remember me</string>
+    <string name="log_in">Log in</string>
+    <string name="register">Register</string>
+    <string name="or">or</string>
+    <string name="log_in_clicked">Log in clicked!</string>
+    <string name="register_clicked">Register clicked!</string>
+    <string name="error_email">Email is not valid!</string>
+    <string name="error_password">Password must have at least 5 characters.</string>
+    <string name="error_confirm_password">Passwords do not match!</string>
+    <string name="password_trailing_icon_content_description">Show password</string>
+    <string name="navigation_icon_content_description">Navigate up</string>
+</resources>
