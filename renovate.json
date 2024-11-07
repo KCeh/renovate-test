@@ -1,39 +1,57 @@
 {
     "extends": [
-      "config:base"
+        "config:recommended"
     ],
     "prTitle": "Update dependencies: {{groupName}}",
     "labels": [
-      "auto pr",
-      "dependencies update"
+        "auto pr",
+        "dependencies update"
     ],
     "prCreation": "not-pending",
     "branchPrefix": "update-dependencies",
     "packageRules": [
         {
-        "description": "Update Android Gradle plugin weekly",
-        "matchPackagePatterns": ["^com\\.android\\.tools\\.build:gradle$"],
-        "groupName": "Android Gradle plugin",
-        "schedule": ["every weekend"]
+            "description": "Update Android Gradle plugin weekly",
+            "groupName": "Android Gradle plugin",
+            "schedule": [
+                "every weekend"
+            ],
+            "matchPackageNames": [
+                "/^com\\.android\\.tools\\.build:gradle$/"
+            ]
         },
         {
-        "description": "Update Kotlin dependencies monthly",
-        "matchPackagePatterns": ["^org\\.jetbrains\\.kotlin"],
-        "groupName": "Kotlin and related dependencies",
-        "schedule": ["every month"]
+            "description": "Update Kotlin dependencies monthly",
+            "groupName": "Kotlin and related dependencies",
+            "schedule": [
+                "every month"
+            ],
+            "matchPackageNames": [
+                "/^org\\.jetbrains\\.kotlin/"
+            ]
         },
         {
-        "description": "Update Compose dependencies monthly",
-        "matchPackagePatterns": ["androidx\\.compose\\..*"],
-        "groupName": "Compose and related dependencies",
-        "schedule": ["every month"]
+            "description": "Update Compose dependencies monthly",
+            "groupName": "Compose and related dependencies",
+            "schedule": [
+                "every month"
+            ],
+            "matchPackageNames": [
+                "/androidx\\.compose\\..*/"
+            ]
         },
         {
-        "description": "Update other dependencies monthly",
-        "matchPackagePatterns": [".*"],
-        "excludePackagePatterns": ["^com\\.android\\.tools\\.build:gradle$", "^org\\.jetbrains\\.kotlin", "androidx\\.compose\\..*"],
-        "groupName": "Other dependencies",
-        "schedule": ["every month"]
+            "description": "Update other dependencies monthly",
+            "groupName": "Other dependencies",
+            "schedule": [
+                "every month"
+            ],
+            "matchPackageNames": [
+                "/.*/",
+                "!/^com\\.android\\.tools\\.build:gradle$/",
+                "!/^org\\.jetbrains\\.kotlin/",
+                "!/androidx\\.compose\\..*/"
+            ]
         }
     ]
-  }
+}
