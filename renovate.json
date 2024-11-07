@@ -8,7 +8,7 @@
         "dependencies update"
     ],
     "prCreation": "not-pending",
-    "branchPrefix": "update-dependencies",
+    "branchPrefix": "update-dependencies-",
     "packageRules": [
         {
             "description": "Update Android Gradle plugin weekly",
@@ -17,7 +17,10 @@
                 "every weekend"
             ],
             "matchPackageNames": [
-                "/^com\\.android\\.tools\\.build:gradle$/"
+                "^com\\.android\\.tools\\.build:gradle$",
+                "^com\\.android\\.application$",
+                "^com\\.android\\.library$",
+                "^gradle$"
             ]
         },
         {
@@ -27,7 +30,7 @@
                 "every month"
             ],
             "matchPackageNames": [
-                "/^org\\.jetbrains\\.kotlin/"
+                "^org\\.jetbrains\\.kotlin"
             ]
         },
         {
@@ -37,7 +40,7 @@
                 "every month"
             ],
             "matchPackageNames": [
-                "/androidx\\.compose\\..*/"
+                "compose"
             ]
         },
         {
@@ -46,12 +49,15 @@
             "schedule": [
                 "every month"
             ],
-            "matchPackageNames": [
-                "/.*/",
-                "!/^com\\.android\\.tools\\.build:gradle$/",
-                "!/^org\\.jetbrains\\.kotlin/",
-                "!/androidx\\.compose\\..*/"
-            ]
+            "matchPackagePatterns": [".*"],
+            "excludePackagePatterns": [
+                "^com\\.android\\.tools\\.build:gradle$",
+                "^com\\.android\\.application$",
+                "^com\\.android\\.library$",
+                "^gradle$",
+                "^org\\.jetbrains\\.kotlin",
+                "compose"
+      ]
         }
     ]
 }
