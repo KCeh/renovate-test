@@ -49,15 +49,15 @@
             "schedule": [
                 "every month"
             ],
-            "matchPackagePatterns": [".*"],
-            "excludePackagePatterns": [
-                "^com\\.android\\.tools\\.build:gradle$",
-                "^com\\.android\\.application$",
-                "^com\\.android\\.library$",
-                "^gradle$",
-                "^org\\.jetbrains\\.kotlin",
-                "compose"
-      ]
+            "matchPackageNames": [
+                "/.*/",
+                "!/^com\\.android\\.tools\\.build:gradle$/",
+                "!/^com\\.android\\.application$/",
+                "!/^com\\.android\\.library$/",
+                "!/^gradle$/",
+                "!/^org\\.jetbrains\\.kotlin/",
+                "!/compose/"
+            ]
         }
     ]
 }
