@@ -2,14 +2,13 @@
     "extends": [
       "config:base"
     ],
-    "prTitlePattern": "Update dependencies: {{groupName}}",
+    "prTitle": "Update dependencies: {{groupName}}",
     "labels": [
       "auto pr",
       "dependencies update"
     ],
     "prCreation": "not-pending",
-    "prTitlePrefix": "Update dependencies",
-    "branchNamePrefix": "update-dependencies",
+    "branchPrefix": "update-dependencies",
     "packageRules": [
         {
         "description": "Update Android Gradle plugin weekly",
