@@ -1,6 +1,40 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ]
-}
+    "extends": [
+      "config:base"
+    ],
+    "prTitlePattern": "Update dependencies: {{groupName}}",
+    "labels": [
+      "auto pr",
+      "dependencies update"
+    ],
+    "prCreation": "not-pending",
+    "prTitlePrefix": "Update dependencies",
+    "branchNamePrefix": "update-dependencies",
+    "packageRules": [
+        {
+        "description": "Update Android Gradle plugin weekly",
+        "matchPackagePatterns": ["^com\\.android\\.tools\\.build:gradle$"],
+        "groupName": "Android Gradle plugin",
+        "schedule": ["every weekend"]
+        },
+        {
+        "description": "Update Kotlin dependencies monthly",
+        "matchPackagePatterns": ["^org\\.jetbrains\\.kotlin"],
+        "groupName": "Kotlin and related dependencies",
+        "schedule": ["every month"]
+        },
+        {
+        "description": "Update Compose dependencies monthly",
+        "matchPackagePatterns": ["androidx\\.compose\\..*"],
+        "groupName": "Compose and related dependencies",
+        "schedule": ["every month"]
+        },
+        {
+        "description": "Update other dependencies monthly",
+        "matchPackagePatterns": [".*"],
+        "excludePackagePatterns": ["^com\\.android\\.tools\\.build:gradle$", "^org\\.jetbrains\\.kotlin", "androidx\\.compose\\..*"],
+        "groupName": "Other dependencies",
+        "schedule": ["every month"]
+        }
+    ]
+  }
