@@ -1,7 +1,7 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
-        "config:base",
+        "config:recommended",
         "group:all",
         ":dependencyDashboard",
         "schedule:monthly"
@@ -14,16 +14,16 @@
     ],
     "packageRules": [
         {
-            "matchPackagePatterns": [
-                "org.jetbrains.kotlin.*"
-            ],
-            "groupName": "Kotlin"
+            "groupName": "Kotlin",
+            "matchPackageNames": [
+                "/org.jetbrains.kotlin.*/"
+            ]
         },
         {
-            "matchPackagePatterns": [
-                "com.google.devtools.ksp"
-            ],
-            "groupName": "kotlin"
+            "groupName": "kotlin",
+            "matchPackageNames": [
+                "/com.google.devtools.ksp/"
+            ]
         },
         {
             "description": "Update Android Gradle plugin weekly",
