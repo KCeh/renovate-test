@@ -32,10 +32,10 @@
             "every weekend"
         ],
         "matchPackageNames": [
-            "^com\\.android\\.tools\\.build:gradle$",
-            "^com\\.android\\.application$",
-            "^com\\.android\\.library$",
-            "^gradle$"
+            "com.android.tools.build:gradle",
+            "com.android.application",
+            "com.android.library$",
+            "gradle"
         ]
     }
     ]
