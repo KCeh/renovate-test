@@ -61,7 +61,7 @@
             "schedule": [
                 "every weekend"
             ],
-            "matchPackagePatterns": [
+            "matchPackageNames": [
                 "gradle"
             ]
         }
