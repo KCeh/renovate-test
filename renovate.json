@@ -1,10 +1,10 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
-      "config:base",
-      "group:all",
-      ":dependencyDashboard",
-      "schedule:monthly"
+        "config:base",
+        "group:all",
+        ":dependencyDashboard",
+        "schedule:monthly"
     ],
     "prCreation": "not-pending",
     "branchPrefix": "update-dependencies-",
@@ -13,30 +13,57 @@
         "dependencies update"
     ],
     "packageRules": [
-      {
-        "matchPackagePatterns": [
-          "org.jetbrains.kotlin.*"
-        ],
-        "groupName": "Kotlin"
-      },
-      {
-        "matchPackagePatterns": [
-          "com.google.devtools.ksp"
-        ],
-        "groupName": "kotlin"
-      },
-      {
-        "description": "Update Android Gradle plugin weekly",
-        "groupName": "Android Gradle plugin",
-        "schedule": [
-            "every weekend"
-        ],
-        "matchPackageNames": [
-            "com.android.tools.build:gradle",
-            "com.android.application",
-            "com.android.library$",
-            "gradle"
-        ]
-    }
+        {
+            "matchPackagePatterns": [
+                "org.jetbrains.kotlin.*"
+            ],
+            "groupName": "Kotlin"
+        },
+        {
+            "matchPackagePatterns": [
+                "com.google.devtools.ksp"
+            ],
+            "groupName": "kotlin"
+        },
+        {
+            "description": "Update Android Gradle plugin weekly",
+            "groupName": "Android Gradle plugin",
+            "schedule": [
+                "every weekend"
+            ],
+            "matchPackageNames": [
+                "com.android.tools.build:gradle"
+            ]
+        },
+        {
+            "description": "Update Android Gradle plugin weekly",
+            "groupName": "Android Gradle plugin",
+            "schedule": [
+                "every weekend"
+            ],
+            "matchPackageNames": [
+                "com.android.application"
+            ]
+        },
+        {
+            "description": "Update Android Gradle plugin weekly",
+            "groupName": "Android Gradle plugin",
+            "schedule": [
+                "every weekend"
+            ],
+            "matchPackageNames": [
+                "com.android.library"
+            ]
+        },
+        {
+            "description": "Update Gradle weekly",
+            "groupName": "Gradle",
+            "schedule": [
+                "every weekend"
+            ],
+            "matchPackageNames": [
+                "gradle"
+            ]
+        }
     ]
-  }
+}
