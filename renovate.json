@@ -1,63 +1,42 @@
 {
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
-        "config:recommended"
+      "config:base",
+      "group:all",
+      ":dependencyDashboard",
+      "schedule:monthly"
     ],
-    "prTitle": "Update dependencies: {{groupName}}",
+    "prCreation": "not-pending",
+    "branchPrefix": "update-dependencies-",
     "labels": [
         "auto pr",
         "dependencies update"
     ],
-    "prCreation": "not-pending",
-    "branchPrefix": "update-dependencies-",
     "packageRules": [
-        {
-            "description": "Update Android Gradle plugin weekly",
-            "groupName": "Android Gradle plugin",
-            "schedule": [
-                "every weekend"
-            ],
-            "matchPackageNames": [
-                "^com\\.android\\.tools\\.build:gradle$",
-                "^com\\.android\\.application$",
-                "^com\\.android\\.library$",
-                "^gradle$"
-            ]
-        },
-        {
-            "description": "Update Kotlin dependencies monthly",
-            "groupName": "Kotlin and related dependencies",
-            "schedule": [
-                "every month"
-            ],
-            "matchPackageNames": [
-                "^org\\.jetbrains\\.kotlin"
-            ]
-        },
-        {
-            "description": "Update Compose dependencies monthly",
-            "groupName": "Compose and related dependencies",
-            "schedule": [
-                "every month"
-            ],
-            "matchPackageNames": [
-                "compose"
-            ]
-        },
-        {
-            "description": "Update other dependencies monthly",
-            "groupName": "Other dependencies",
-            "schedule": [
-                "every month"
-            ],
-            "matchPackageNames": [
-                "/.*/",
-                "!/^com\\.android\\.tools\\.build:gradle$/",
-                "!/^com\\.android\\.application$/",
-                "!/^com\\.android\\.library$/",
-                "!/^gradle$/",
-                "!/^org\\.jetbrains\\.kotlin/",
-                "!/compose/"
-            ]
-        }
+      {
+        "matchPackagePatterns": [
+          "org.jetbrains.kotlin.*"
+        ],
+        "groupName": "Kotlin"
+      },
+      {
+        "matchPackagePatterns": [
+          "com.google.devtools.ksp"
+        ],
+        "groupName": "kotlin"
+      },
+      {
+        "description": "Update Android Gradle plugin weekly",
+        "groupName": "Android Gradle plugin",
+        "schedule": [
+            "every weekend"
+        ],
+        "matchPackageNames": [
+            "^com\\.android\\.tools\\.build:gradle$",
+            "^com\\.android\\.application$",
+            "^com\\.android\\.library$",
+            "^gradle$"
+        ]
+    }
     ]
-}
+  }
