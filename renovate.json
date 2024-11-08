@@ -31,7 +31,7 @@
             "schedule": [
                 "every weekend"
             ],
-            "matchPackageNames": [
+            "matchPackagePatterns": [
                 "com.android.tools.build:gradle"
             ]
         },
@@ -41,7 +41,7 @@
             "schedule": [
                 "every weekend"
             ],
-            "matchPackageNames": [
+            "matchPackagePatterns": [
                 "com.android.application"
             ]
         },
@@ -51,7 +51,7 @@
             "schedule": [
                 "every weekend"
             ],
-            "matchPackageNames": [
+            "matchPackagePatterns": [
                 "com.android.library"
             ]
         },
@@ -61,7 +61,7 @@
             "schedule": [
                 "every weekend"
             ],
-            "matchPackageNames": [
+            "matchPackagePatterns": [
                 "gradle"
             ]
         }
