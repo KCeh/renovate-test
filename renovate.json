@@ -17,13 +17,7 @@
             "description": "Update Kotlin (and related libs) weekly",
             "groupName": "Kotlin",
             "matchPackageNames": [
-                "/org.jetbrains.kotlin.*/"
-            ]
-        },
-        {
-            "description": "Update Kotlin (and related libs) weekly",
-            "groupName": "Kotlin",
-            "matchPackageNames": [
+                "/org.jetbrains.kotlin.*/",
                 "/com.google.devtools.ksp/"
             ]
         },
