@@ -35,16 +35,7 @@
             ],
             "matchPackageNames": [
                 "/com.android.application/",
-                "/com.android.tools.build:gradle/"
-            ]
-        },
-        {
-            "description": "Update Android Gradle plugin weekly",
-            "groupName": "Android Gradle plugin",
-            "schedule": [
-                "every weekend"
-            ],
-            "matchPackageNames": [
+                "/com.android.tools.build:gradle/",
                 "/com.android.library/"
             ]
         },
