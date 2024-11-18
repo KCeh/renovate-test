@@ -14,12 +14,14 @@
     ],
     "packageRules": [
         {
+            "description": "Update Kotlin (and related libs) weekly",
             "groupName": "Kotlin",
             "matchPackageNames": [
                 "/org.jetbrains.kotlin.*/"
             ]
         },
         {
+            "description": "Update Kotlin (and related libs) weekly",
             "groupName": "Kotlin",
             "matchPackageNames": [
                 "/com.google.devtools.ksp/"
@@ -32,17 +34,8 @@
                 "every weekend"
             ],
             "matchPackageNames": [
+                "/com.android.application/",
                 "/com.android.tools.build:gradle/"
-            ]
-        },
-        {
-            "description": "Update Android Gradle plugin weekly",
-            "groupName": "Android Gradle plugin",
-            "schedule": [
-                "every weekend"
-            ],
-            "matchPackageNames": [
-                "/com.android.application/"
             ]
         },
         {
